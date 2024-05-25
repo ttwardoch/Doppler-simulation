@@ -5,7 +5,7 @@ G = 6.6743 * 10**(-11)
 c = 300000000
 EARTH_MASS = 5.97219 * 10**24
 EARTH_RADIUS = 6371000  # in m
-EARTH_SPEED = 0#2*np.pi*EARTH_RADIUS / 24 / 3600  # speed of the equator in m/s
+EARTH_SPEED = 2*np.pi*EARTH_RADIUS / 24 / 3600  # speed of the equator in m/s
 SATELLITE_HEIGHT = 600000  # in m
 SATELLITE_RADIUS = EARTH_RADIUS + SATELLITE_HEIGHT
 ORBITAL_SPEED = np.sqrt(G*EARTH_MASS/SATELLITE_RADIUS)  # m/s
@@ -64,5 +64,6 @@ plt.xlabel("Time[s]")
 plt.ylabel("Doppler shift per GHz [kHz/Ghz]")
 plt.title("Doppler shift vs time for a satellite above the horizon")
 plt.legend()
+plt.grid()
 plt.tight_layout()
 plt.show()
